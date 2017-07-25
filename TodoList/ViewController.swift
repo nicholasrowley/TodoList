@@ -20,7 +20,14 @@ class ViewController: UIViewController {
     @IBOutlet weak var saveButton: UIBarButtonItem!
     
     @IBAction func cancel(_ sender: UIBarButtonItem) {
-        dismiss(animated: true, completion: nil)
+        let isInAddMode = presentingViewController is UINavigationController
+        
+        if isInAddMode {
+           dismiss(animated: true, completion: nil)
+        }
+        else {
+            navigationController!.popViewController(animated: true)
+        }
     }
     
     override func viewDidLoad() {

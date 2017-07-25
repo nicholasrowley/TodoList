@@ -107,10 +107,17 @@ class ItemTableViewController: UITableViewController {
         ViewController
         let item = srcViewCon?.item
         if (srcViewCon != nil && item?.name != ""){
-            //Add a new item
-            let newIndexPath = NSIndexPath(row: items.count, section: 0)
-            items.append(item!)
-            tableView.insertRows(at: [newIndexPath as IndexPath], with: UITableViewRowAnimation.bottom)
+            if let selectedIndexPath = tableView.indexPathForSelectedRow {
+                //Update an existing item.
+                items[selectedIndexPath.row] = item!
+                tableView.reloadRows(at: [selectedIndexPath], with: .none)
+            }
+            else {
+                //Add a new item
+                let newIndexPath = NSIndexPath(row: items.count, section: 0)
+                items.append(item!)
+                tableView.insertRows(at: [newIndexPath as IndexPath], with: .bottom)
+            }
         }
     }
     
