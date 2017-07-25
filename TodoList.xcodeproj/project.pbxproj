@@ -14,6 +14,9 @@
 		E1C849611F26EB06004F26F7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1C8495F1F26EB06004F26F7 /* LaunchScreen.storyboard */; };
 		E1C8496C1F26EB06004F26F7 /* TodoListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C8496B1F26EB06004F26F7 /* TodoListTests.swift */; };
 		E1C849771F26EB06004F26F7 /* TodoListUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C849761F26EB06004F26F7 /* TodoListUITests.swift */; };
+		E1C849851F26EE5B004F26F7 /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C849841F26EE5B004F26F7 /* ItemTableViewCell.swift */; };
+		E1C849871F26EF7C004F26F7 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C849861F26EF7C004F26F7 /* Item.swift */; };
+		E1C849891F26EFE8004F26F7 /* ItemTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C849881F26EFE8004F26F7 /* ItemTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,9 @@
 		E1C849721F26EB06004F26F7 /* TodoListUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TodoListUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1C849761F26EB06004F26F7 /* TodoListUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListUITests.swift; sourceTree = "<group>"; };
 		E1C849781F26EB06004F26F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E1C849841F26EE5B004F26F7 /* ItemTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
+		E1C849861F26EF7C004F26F7 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		E1C849881F26EFE8004F26F7 /* ItemTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +106,9 @@
 				E1C849561F26EB06004F26F7 /* AppDelegate.swift */,
 				E1C849581F26EB06004F26F7 /* ViewController.swift */,
 				E1C8495A1F26EB06004F26F7 /* Main.storyboard */,
+				E1C849861F26EF7C004F26F7 /* Item.swift */,
+				E1C849881F26EFE8004F26F7 /* ItemTableViewController.swift */,
+				E1C849841F26EE5B004F26F7 /* ItemTableViewCell.swift */,
 				E1C8495D1F26EB06004F26F7 /* Assets.xcassets */,
 				E1C8495F1F26EB06004F26F7 /* LaunchScreen.storyboard */,
 				E1C849621F26EB06004F26F7 /* Info.plist */,
@@ -261,7 +270,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1C849891F26EFE8004F26F7 /* ItemTableViewController.swift in Sources */,
+				E1C849871F26EF7C004F26F7 /* Item.swift in Sources */,
 				E1C849591F26EB06004F26F7 /* ViewController.swift in Sources */,
+				E1C849851F26EE5B004F26F7 /* ItemTableViewCell.swift in Sources */,
 				E1C849571F26EB06004F26F7 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
