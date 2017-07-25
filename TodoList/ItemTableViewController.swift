@@ -113,5 +113,22 @@ class ItemTableViewController: UITableViewController {
             tableView.insertRows(at: [newIndexPath as IndexPath], with: UITableViewRowAnimation.bottom)
         }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ShowDetail" {
+            let detailVC = segue.destination as! ViewController
+            
+            //Get the cell that generated this segue.
+            if let selectedCell = sender as?
+                ItemTableViewCell {
+                let indexPath = tableView.indexPath(for: selectedCell)!
+                let selectedItem = items[indexPath.row]
+                detailVC.item = selectedItem
+            }
+        }
+        else if segue.identifier == "AddItem" {
+            
+        }
+    }
 
 }
