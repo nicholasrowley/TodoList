@@ -67,6 +67,7 @@ class ItemTableViewController: UITableViewController {
         if editingStyle == .delete {
             // Delete the row from the data source
             self.items.remove(at: indexPath.row)
+            saveItems()
             self.tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
@@ -120,6 +121,7 @@ class ItemTableViewController: UITableViewController {
                 items.append(item!)
                 tableView.insertRows(at: [newIndexPath as IndexPath], with: .bottom)
             }
+            saveItems()
         }
     }
     
@@ -137,6 +139,13 @@ class ItemTableViewController: UITableViewController {
         }
         else if segue.identifier == "AddItem" {
             
+        }
+    }
+    
+    func saveItems() {
+        let isSaved = NSKeyedArchiver.archiveRootObject(items, toFile: Item.ArchiveURL.path)
+        if !isSaved {
+            print("Failed to save items...")
         }
     }
 
