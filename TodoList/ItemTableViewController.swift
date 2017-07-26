@@ -18,6 +18,13 @@ class ItemTableViewController: UITableViewController {
         loadSampleItems()
 
         navigationItem.leftBarButtonItem = editButtonItem
+        
+        //Load saved items
+        if let savedItems = loadItems() {
+            items += savedItems
+        }
+        
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -148,5 +155,11 @@ class ItemTableViewController: UITableViewController {
             print("Failed to save items...")
         }
     }
+    
+    func loadItems() -> [Item]? {
+        return NSKeyedUnarchiver.unarchiveObject(withFile: Item.ArchiveURL.path) as? [Item]
+    }
+    
+    
 
 }
