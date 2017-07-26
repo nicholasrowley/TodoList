@@ -73,8 +73,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="jIW-Hr-BYn">
-                                <rect key="frame" x="16" y="124" width="343" height="50.5"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="jIW-Hr-BYn">
+                                <rect key="frame" x="16" y="124" width="343" height="299.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Todo Item" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r0f-LY-4do">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="20.5"/>
@@ -83,25 +83,28 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="What needs to be done?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dGt-Jy-5kg">
-                                        <rect key="frame" x="0.0" y="20.5" width="343" height="30"/>
+                                        <rect key="frame" x="0.0" y="32.5" width="343" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Droid" translatesAutoresizingMaskIntoConstraints="NO" id="KHR-OV-zvj">
+                                        <rect key="frame" x="0.0" y="74.5" width="343" height="225"/>
+                                    </imageView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="dGt-Jy-5kg" secondAttribute="trailing" id="Bfq-Lk-lsK"/>
-                                    <constraint firstItem="dGt-Jy-5kg" firstAttribute="leading" secondItem="jIW-Hr-BYn" secondAttribute="leading" id="VKF-iy-euZ"/>
-                                    <constraint firstItem="r0f-LY-4do" firstAttribute="leading" secondItem="jIW-Hr-BYn" secondAttribute="leading" id="e47-g0-Ajm"/>
-                                    <constraint firstAttribute="trailing" secondItem="r0f-LY-4do" secondAttribute="trailing" id="jiZ-Mx-ZZt"/>
+                                    <constraint firstAttribute="trailing" secondItem="r0f-LY-4do" secondAttribute="trailing" id="JHE-Ww-heI"/>
+                                    <constraint firstItem="dGt-Jy-5kg" firstAttribute="leading" secondItem="jIW-Hr-BYn" secondAttribute="leading" id="Zda-MT-sFQ"/>
+                                    <constraint firstItem="r0f-LY-4do" firstAttribute="leading" secondItem="jIW-Hr-BYn" secondAttribute="leading" id="dlp-7Y-9v3"/>
+                                    <constraint firstAttribute="trailing" secondItem="dGt-Jy-5kg" secondAttribute="trailing" id="hoo-bh-SXg"/>
                                 </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="jIW-Hr-BYn" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="60" id="3G7-cS-0kp"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="jIW-Hr-BYn" secondAttribute="trailing" id="IgH-4G-jNe"/>
-                            <constraint firstItem="jIW-Hr-BYn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="K8T-G5-Q8N"/>
+                            <constraint firstItem="jIW-Hr-BYn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="1VN-0H-9MR"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="jIW-Hr-BYn" secondAttribute="trailing" id="VN8-qs-L94"/>
+                            <constraint firstItem="jIW-Hr-BYn" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="60" id="nda-tf-bfz"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="New Item" id="Ofc-hi-bx8">
@@ -164,6 +167,9 @@
             <point key="canvasLocation" x="865" y="-244"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Droid" width="400" height="225"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="ilX-1e-aO9"/>
     </inferredMetricsTieBreakers>
